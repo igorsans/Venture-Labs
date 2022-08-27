@@ -26,8 +26,7 @@ const CadastroProvider = ({ children }) => {
         })
     }
 
-    const handleClick = (e) => {
-        e.preventDefault()
+    const handleClick = () => {
         setLista([...lista, dadosForm])
         setDadosForm({
         nome: '',
