@@ -9,7 +9,6 @@ function App() {
   return (
   <div className={S.body}>
       <BrowserRouter>
-        <h1>helloworld</h1>
         <Menu/>
         <CadrastroProvider>
           <Routes>

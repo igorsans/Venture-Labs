@@ -1,15 +1,17 @@
 import { useContext } from "react";
 import CardCad from "../../Components/CardCad/CardCad";
 import { CadastroContext } from "../../Context/CadastroProvider";
-
+import S from './Cadastro.module.css'
 const Cadastros = () => {
   const { lista } = useContext(CadastroContext);
 
   return (
-    <div>
+    <div className={S.container}>
       {lista.length > 0 ?
         lista.map((item) => (
             <CardCad
+              style={S.card}
+              styleIn={S.in}
               key={item.cpf}
               nome={item.nome}
               sobrenome={item.sobrenome}

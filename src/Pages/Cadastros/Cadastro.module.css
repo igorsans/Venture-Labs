@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.card{
+    width: 300px;
+    border-radius: 6px;  
+    padding: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.18);
+}
+.card > h3{
+    margin: 10px 0px;
+    font-family: 'DM Serif Display'
+}
+.in{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: 'Lato', sans-serif;
+}

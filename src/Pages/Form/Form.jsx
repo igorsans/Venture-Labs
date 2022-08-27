@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Label from '../../Components/Label/Label'
 import Input from '../../Components/Input/Input'
 import Button from '../../Components/Button/Button'
+import S from './Form.module.css'
 
 
 const Form = () => {
@@ -29,48 +30,48 @@ const Form = () => {
     setPage(page-3)
   }
   return (
-    <form action="">
+    <form className={S.form}>
       {page ==1? 
-      <div>
+      <div className={S.container}>
         <Label text="Nome:"></Label>
-        <Input func={handleChange} nomeChave={"nome"} value={dadosForm.nome} ></Input>
+        <Input style={S.input} func={handleChange} nomeChave={"nome"} value={dadosForm.nome} ></Input>
         <Label text="Sobrenome:"></Label>
-        <Input func={handleChange} nomeChave={"sobrenome"} value={dadosForm.sobrenome} ></Input>
+        <Input style={S.input} func={handleChange} nomeChave={"sobrenome"} value={dadosForm.sobrenome} ></Input>
         <Label text= "E-mail:"></Label>
-        <Input func={handleChange} nomeChave={"email"} value={dadosForm.email} ></Input>
+        <Input style={S.input} func={handleChange} nomeChave={"email"} value={dadosForm.email} ></Input>
         <Label text= "Telefone:"></Label>
-        <Input func={handleChange} nomeChave={"telefone"} value={dadosForm.telefone}></Input>
-        <Button onClick={proxVals} text="ir"/>
+        <Input style={S.input} func={handleChange} nomeChave={"telefone"} value={dadosForm.telefone}></Input>
+        <Button style={S.btn} onClick={proxVals} text="ir"/>
       </div>
       : ''}
       {page ==2?
-      <div>
+      <div className={S.container}>
         <Label text="Cep:"></Label>
-        <Input func={handleChange} nomeChave={"cep"} value={dadosForm.cep}></Input>
+        <Input style={S.input} func={handleChange} nomeChave={"cep"} value={dadosForm.cep}></Input>
         <Label text="Endereço 1:"></Label>
-        <Input func={handleChange} nomeChave={"endUm"} value={dadosForm.endUm} ></Input>
+        <Input style={S.input} func={handleChange} nomeChave={"endUm"} value={dadosForm.endUm} ></Input>
         <Label text="Endereço 2:"></Label>
-        <Input func={handleChange} nomeChave={"endDois"} value={dadosForm.endDois} ></Input>
-        <Button onClick={antVals} text="voltar"/>
-        <Button onClick={proxVals} text="ir"/>
+        <Input style={S.input} func={handleChange} nomeChave={"endDois"} value={dadosForm.endDois} ></Input>
+        <Button style={S.btn} onClick={antVals} text="voltar"/>
+        <Button style={S.btn} onClick={proxVals} text="ir"/>
       </div>
       : ''}
       {page ==3?
-      <div>
+      <div className={S.container}>
         <Label text="Data de Nascimento:"></Label>
-        <Input func={handleChange} nomeChave={"dataNasc"} value={dadosForm.dataNasc}></Input>
+        <Input style={S.input} func={handleChange} nomeChave={"dataNasc"} value={dadosForm.dataNasc}></Input>
         <Label text="CPF:"></Label>
-        <Input func={handleChange} nomeChave={"cpf"} value={dadosForm.cpf} ></Input>
+        <Input style={S.input} func={handleChange} nomeChave={"cpf"} value={dadosForm.cpf} ></Input>
         <Label text="Renda Mensal:"></Label>
-        <Input func={handleChange} nomeChave={"rendaMes"} value={dadosForm.rendaMes} ></Input>
-        <Button onClick={antVals} text="voltar"/>
-        <Button onClick={cadastrar} text="Cadastrar"/>
+        <Input style={S.input} func={handleChange} nomeChave={"rendaMes"} value={dadosForm.rendaMes} ></Input>
+        <Button style={S.btn} onClick={antVals} text="voltar"/>
+        <Button style={S.btn} onClick={cadastrar} text="Cadastrar"/>
       </div>
       : ''}
       {page==4?
-      <div>
+      <div className={S.container}>
         <h1>Usuario cadastrado com sucesso</h1>
-        <Button onClick={inicio} text="Novo Cadastro"/>
+        <Button style={S.btn} onClick={inicio} text="Novo Cadastro"/>
       </div>  
       : ''}
     </form>
