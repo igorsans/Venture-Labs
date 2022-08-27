@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Input = () => {
+const Input = ({func, nomeChave, value}) => {
   return (
-    <input></input>
+    <input value={value} onChange={(e) => func(e, nomeChave)}></input>
   )
 }
 

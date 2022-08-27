@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
 
-export const cadatroContext = createContext()
+export const CadastroContext = createContext()
 
-const cadatroProvider = ({ children }) => {
+const CadastroProvider = ({ children }) => {
     const [dadosForm, setDadosForm] = useState({
         nome: '',
         sobrenome: '',
@@ -17,12 +17,15 @@ const cadatroProvider = ({ children }) => {
     })
 
     const [lista, setLista] = useState([])
+
     const handleChange = (e, nomeDaChave) => {
         setDadosForm({
             ...dadosForm,
             [nomeDaChave]: e.target.value
+            
         })
     }
+
     const handleClick = (e) => {
         e.preventDefault()
         setLista([...lista, dadosForm])
@@ -39,17 +42,19 @@ const cadatroProvider = ({ children }) => {
         rendaMes: ''
         })
     }
+
     const contexto = {
         dadosForm: dadosForm,
         lista: lista,
         handleChange: handleChange,
         handleClick: handleClick
     }
+
     return (
-        <cadatroContext.Provider value={contexto}>
+        <CadastroContext.Provider value={contexto}>
             {children}
-        </cadatroContext.Provider>
+        </CadastroContext.Provider>
     )
 }
 
-export default cadatroProvider
+export default CadastroProvider
