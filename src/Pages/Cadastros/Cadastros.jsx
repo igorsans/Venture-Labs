@@ -25,7 +25,7 @@ const Cadastros = () => {
               renda={item.rendaMes}
             />
           ))
-        : "Nenhum usuario cadastrado"}
+        : <p className={S.p}>"Nenhum usuario cadastrado"</p>}
     </div>
   );
 };

@@ -10,14 +10,14 @@ const CardCad = ({style, styleIn, nome, sobrenome, email, telefone, cep, endUm, 
     <div className={style} onClick={(e) => showHide(e)}> <h3>{`${nome} ${sobrenome}`}</h3>
     {show == true? 
         <div className={styleIn}>
-            <p>{email}</p>
-            <p>{telefone}</p>
-            <p>{cep}</p>
-            <p>{endUm}</p>
-            <p>{endDois}</p>
-            <p>{dataNasc}</p>
-            <p>{cpf}</p>
-            <p>{renda}</p>
+            <p>Email: {email}</p>
+            <p>Telefone: {telefone}</p>
+            <p>Cep: {cep}</p>
+            <p>Endereço 1: {endUm}</p>
+            <p>Endereço 2: {endDois}</p>
+            <p>Data de Nascimento: {dataNasc}</p>
+            <p>CPF: {cpf}</p>
+            <p>Renda Mensal: {renda}</p>
         </div>: ''}
     </div>
   )
